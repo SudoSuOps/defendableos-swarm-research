@@ -30,7 +30,7 @@ Every record is traceable to its source. Every source has a trust tier. Nothing 
 ```
 defendableos-swarm-research/
 |-- README.md                          # This file
-|-- deliverables/                      # 12 canonical deliverables
+|-- deliverables/                      # 13 canonical deliverables
 |   |-- 00_EXECUTIVE_MEMO.md           # One-page strategic summary
 |   |-- 01_DEFENDABLE_ONTOLOGY.md      # Full vocabulary & taxonomy system
 |   |-- 02_SOURCE_REGISTRY.csv         # 172 sources with metadata
@@ -109,7 +109,7 @@ NIST published the **AI RMF Agentic Profile** (May 2026), covering agent comprom
 
 ---
 
-## The 12 Deliverables
+## The 13 Deliverables
 
 ### For Founders & Strategists
 | # | File | What It Contains |
