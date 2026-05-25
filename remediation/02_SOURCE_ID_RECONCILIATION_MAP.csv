@@ -1,0 +1,71 @@
+orphan_source_id,canonical_source_id,match_signal,orphan_url,orphan_name_at_seed,orphan_owner_at_seed,affected_record_id,remediation_timestamp
+SRC-FIN-027,SRC-FIN-002,URL_EXACT,https://files.consumerfinance.gov/f/documents/cfpb_2025-cr-annual-report_2026-03.pdf,CFPB Consumer Response: Vehicle Loan Complaints 2025,CFPB,REC-FIN-0027,2026-05-25T04:43:24Z
+SRC-FIN-028,SRC-FIN-002,URL_EXACT,https://files.consumerfinance.gov/f/documents/cfpb_2025-cr-annual-report_2026-03.pdf,CFPB Consumer Response: Personal Loan Complaints 2025,CFPB,REC-FIN-0028,2026-05-25T04:43:24Z
+SRC-FIN-029,SRC-FIN-002,URL_EXACT,https://files.consumerfinance.gov/f/documents/cfpb_2025-cr-annual-report_2026-03.pdf,CFPB Consumer Response: Debt Settlement Complaints 2025,CFPB,REC-FIN-0029,2026-05-25T04:43:24Z
+SRC-FIN-031,SRC-FIN-005,URL_EXACT,https://www.consumerfinance.gov/enforcement/enforcement-by-the-numbers/,CFPB Enforcement by the Numbers,CFPB,REC-FIN-0031,2026-05-25T04:43:24Z
+SRC-FIN-032,SRC-FIN-002,URL_EXACT,https://files.consumerfinance.gov/f/documents/cfpb_2025-cr-annual-report_2026-03.pdf,CFPB Consumer Response Annual Report 2025,CFPB,REC-FIN-0032,2026-05-25T04:43:24Z
+SRC-FIN-033,SRC-FIN-006,URL_EXACT,https://www.ftc.gov/reports/consumer-sentinel-network-data-book-2024,FTC Consumer Sentinel: Imposter Scam Data,FTC,REC-FIN-0033,2026-05-25T04:43:24Z
+SRC-FIN-034,SRC-FIN-006,URL_EXACT,https://www.ftc.gov/reports/consumer-sentinel-network-data-book-2024,FTC Consumer Sentinel: Government Impersonation,FTC,REC-FIN-0034,2026-05-25T04:43:24Z
+SRC-FIN-036,SRC-FIN-003,URL_EXACT,https://files.consumerfinance.gov/f/documents/cfpb_fcra-611e-report_2025-12.pdf,CFPB FCRA 611(e) Annual Report 2025,CFPB,REC-FIN-0036,2026-05-25T04:43:24Z
+SRC-FIN-037,SRC-FIN-019,URL_EXACT,https://www.ftc.gov/system/files/ftc_gov/pdf/P144400-OlderAdultsReportDec2025.pdf,FTC Protecting Older Consumers Report,FTC,REC-FIN-0037,2026-05-25T04:43:24Z
+SRC-FIN-039,SRC-FIN-013,URL_EXACT,https://www.gao.gov/assets/gao-26-108248.pdf,CFPB FY 2025 Civil Penalties $175.7M,GAO,REC-FIN-0039,2026-05-25T04:43:24Z
+SRC-FIN-041,SRC-FIN-006,URL_EXACT,https://www.ftc.gov/reports/consumer-sentinel-network-data-book-2024,FTC Consumer Sentinel: Social Media Fraud Losses,FTC,REC-FIN-0041,2026-05-25T04:43:24Z
+SRC-FIN-042,SRC-FIN-006,URL_EXACT,https://www.ftc.gov/reports/consumer-sentinel-network-data-book-2024,FTC Consumer Sentinel: Payment Method Fraud,FTC,REC-FIN-0042,2026-05-25T04:43:24Z
+SRC-FIN-043,SRC-FIN-006,URL_EXACT,https://www.ftc.gov/reports/consumer-sentinel-network-data-book-2024,FTC Consumer Sentinel: Romance Scam Losses,FTC,REC-FIN-0043,2026-05-25T04:43:24Z
+SRC-FIN-046,SRC-FIN-002,URL_EXACT,https://files.consumerfinance.gov/f/documents/cfpb_2025-cr-annual-report_2026-03.pdf,CFPB 2025 Debt Collection Complaints,CFPB,REC-FIN-0046,2026-05-25T04:43:24Z
+SRC-FIN-048,SRC-FIN-003,URL_EXACT,https://files.consumerfinance.gov/f/documents/cfpb_fcra-611e-report_2025-12.pdf,CFPB FCRA Report: TransUnion Dispute Confirmation,CFPB,REC-FIN-0048,2026-05-25T04:43:24Z
+SRC-FIN-049,SRC-FIN-002,URL_EXACT,https://files.consumerfinance.gov/f/documents/cfpb_2025-cr-annual-report_2026-03.pdf,CFPB Servicemember Complaints 2025,CFPB,REC-FIN-0049,2026-05-25T04:43:24Z
+SRC-FIN-051,SRC-FIN-006,URL_EXACT,https://www.ftc.gov/reports/consumer-sentinel-network-data-book-2024,FTC/Javelin Identity Theft Demographics,FTC/Javelin,REC-FIN-0051,2026-05-25T04:43:24Z
+SRC-FRD-001,SRC-FRA-001,URL_EXACT,https://www.fbi.gov/file-repository/2025_ic3report.pdf,FBI IC3 2025 Internet Crime Report,FBI IC3,REC-FRD-0001,2026-05-25T04:43:24Z
+SRC-FRD-002,SRC-FRA-001,URL_EXACT,https://www.fbi.gov/file-repository/2025_ic3report.pdf,FBI IC3 2025: AI-Nexus BEC Losses,FBI IC3,REC-FRD-0002,2026-05-25T04:43:24Z
+SRC-FRD-003,SRC-FRA-001,URL_EXACT,https://www.fbi.gov/file-repository/2025_ic3report.pdf,FBI IC3 2025: Ransomware Surge,FBI IC3,REC-FRD-0003,2026-05-25T04:43:24Z
+SRC-FRD-004,SRC-FRA-001,URL_EXACT,https://www.fbi.gov/file-repository/2025_ic3report.pdf,FBI IC3 2025: Investment Fraud Dominance,FBI IC3,REC-FRD-0004,2026-05-25T04:43:24Z
+SRC-FRD-005,SRC-FRA-003,URL_EXACT,https://www.fbi.gov/news/press-releases/cryptocurrency-and-ai-scams-bilk-americans-of-billions,FBI IC3 2025: Cryptocurrency Fraud,FBI IC3 / FBI Press Release,REC-FRD-0005,2026-05-25T04:43:24Z
+SRC-FRD-006,SRC-FRA-001,URL_EXACT,https://www.fbi.gov/file-repository/2025_ic3report.pdf,FBI IC3 2025: Tech Support Scams,FBI IC3,REC-FRD-0006,2026-05-25T04:43:24Z
+SRC-FRD-007,SRC-FIN-006,URL_EXACT,https://www.ftc.gov/reports/consumer-sentinel-network-data-book-2024,FTC Romance Scam Data 2024,FTC,REC-FRD-0007,2026-05-25T04:43:24Z
+SRC-FRD-008,SRC-FRA-003,URL_EXACT,https://www.fbi.gov/news/press-releases/cryptocurrency-and-ai-scams-bilk-americans-of-billions,FBI IC3 2025: AI-Related Complaints,FBI IC3,REC-FRD-0008,2026-05-25T04:43:24Z
+SRC-FRD-009,SRC-FRA-013,URL_EXACT,https://keepnetlabs.com/blog/deepfake-statistics-and-trends,Arup Deepfake Video Conference Fraud,Keepnet Labs / Industry Reports,REC-FRD-0009,2026-05-25T04:43:24Z
+SRC-FRD-010,SRC-FRA-013,URL_EXACT,https://keepnetlabs.com/blog/deepfake-statistics-and-trends,UK Energy Firm CEO Voice Deepfake,Keepnet Labs,REC-FRD-0010,2026-05-25T04:43:24Z
+SRC-FRD-011,SRC-FRA-005,URL_EXACT,https://www.sec.gov/newsroom/press-releases/2026-34,SEC v. PGI Global Crypto Fraud,SEC,REC-FRD-0011,2026-05-25T04:43:24Z
+SRC-FRD-012,SRC-FRA-005,URL_EXACT,https://www.sec.gov/newsroom/press-releases/2026-34,SEC v. Unicoin False Crypto Offering,SEC,REC-FRD-0012,2026-05-25T04:43:24Z
+SRC-FRD-014,SRC-FRA-011,URL_EXACT,https://www.titanhq.com/email-security-2025/state-email-security-report-2025/,FBI IC3: $50M BEC Construction Loss,FBI IC3 / TitanHQ,REC-FRD-0014,2026-05-25T04:43:24Z
+SRC-FRD-015,SRC-FRA-011,URL_EXACT,https://www.titanhq.com/email-security-2025/state-email-security-report-2025/,FBI IC3: $4.9M Real Estate Wire Fraud,FBI IC3 / TitanHQ,REC-FRD-0015,2026-05-25T04:43:24Z
+SRC-FRD-016,SRC-FRA-019,URL_EXACT,https://events.afcea.org/fedid25/CUSTOM/pdf/transunion_tl.pdf,TransUnion Synthetic Identity Fraud Data,TransUnion,REC-FRD-0016,2026-05-25T04:43:24Z
+SRC-FRD-017,SRC-FRA-017,URL_EXACT,https://www.ftc.gov/news-events/news/press-releases/2026/04/new-ftc-data-show-people-have-lost-billions-to-social-media-scams,FTC Social Media Investment Scam Data,FTC,REC-FRD-0017,2026-05-25T04:43:24Z
+SRC-FRD-018,SRC-FRA-023,URL_EXACT,https://www.fool.com/money/research/identity-theft-credit-card-fraud-statistics/,FTC Identity Theft Q1-Q3 2025,FTC / Motley Fool,REC-FRD-0018,2026-05-25T04:43:24Z
+SRC-FRD-019,SRC-FRA-025,URL_EXACT,https://authx.com/blog/account-takeover-fraud-statistics-insights/,Account Takeover Fraud Statistics 2025,AuthX,REC-FRD-0019,2026-05-25T04:43:24Z
+SRC-FRD-020,SRC-FRA-016,URL_EXACT,https://codekeeper.co/ticker/ransomware-attacks-on-critical-infrastructure-2025,KELA Ransomware Critical Infrastructure 2025,KELA / Industrial Cyber,REC-FRD-0020,2026-05-25T04:43:24Z
+SRC-FRD-021,SRC-FRA-020,URL_EXACT,https://sumsub.com/blog/top-new-identity-fraud-trends/,Sumsub Sophisticated Fraud Trends 2026,Sumsub,REC-FRD-0021,2026-05-25T04:43:24Z
+SRC-FRD-022,SRC-FRA-026,URL_EXACT,https://home.barclays/news/press-releases/2025/04/barclays-scams-bulletin,Barclays UK Romance Scam Data,Barclays,REC-FRD-0022,2026-05-25T04:43:24Z
+SRC-FRD-023,SRC-FRA-024,URL_EXACT,https://discreetinvestigations.ca/research/elder-fraud-statistics/,DOJ Elder Fraud Enforcement Data,DOJ / Discreet Investigations,REC-FRD-0023,2026-05-25T04:43:24Z
+SRC-FRD-024,SRC-FRA-018,URL_EXACT,https://www.cifas.org.uk/newsroom/fraudscape-2025-6monthupdate,Cifas UK Fraudscape H1 2025,Cifas,REC-FRD-0024,2026-05-25T04:43:24Z
+SRC-FRD-025,SRC-FRA-013,URL_EXACT,https://keepnetlabs.com/blog/deepfake-statistics-and-trends,Deepfake Content Explosion 2023-2025,Keepnet Labs,REC-FRD-0025,2026-05-25T04:43:24Z
+SRC-FRD-027,SRC-FRA-019,URL_EXACT,https://events.afcea.org/fedid25/CUSTOM/pdf/transunion_tl.pdf,TransUnion Data Breach Exposure 2024,TransUnion,REC-FRD-0027,2026-05-25T04:43:24Z
+SRC-FRD-028,SRC-FRA-013,URL_EXACT,https://keepnetlabs.com/blog/deepfake-statistics-and-trends,Deepfake Fraud Losses US 2025,Keepnet Labs,REC-FRD-0028,2026-05-25T04:43:24Z
+SRC-FRD-029,SRC-FRA-001,URL_EXACT,https://www.fbi.gov/file-repository/2025_ic3report.pdf,FBI IC3 2025: BEC Total Losses,FBI IC3,REC-FRD-0029,2026-05-25T04:43:24Z
+SRC-FRD-030,SRC-FRA-008,URL_EXACT,https://www.aarp.org/money/scams-fraud/fbi-ftc-report-2025-losses/,FBI IC3 2025: Elder Fraud Losses,FBI IC3 / AARP,REC-FRD-0030,2026-05-25T04:43:24Z
+SRC-FRD-031,SRC-FRA-003,URL_EXACT,https://www.fbi.gov/news/press-releases/cryptocurrency-and-ai-scams-bilk-americans-of-billions,FBI Operation Level Up Crypto Prevention,FBI,REC-FRD-0031,2026-05-25T04:43:24Z
+SRC-FRD-032,SRC-FRA-005,URL_EXACT,https://www.sec.gov/newsroom/press-releases/2026-34,SEC Cyber & Emerging Technologies Unit Launch,SEC,REC-FRD-0032,2026-05-25T04:43:24Z
+SRC-FRD-034,SRC-FRA-013,URL_EXACT,https://keepnetlabs.com/blog/deepfake-statistics-and-trends,Gen AI Fraud Projected $40B 2027,Deloitte / Keepnet Labs,REC-FRD-0034,2026-05-25T04:43:24Z
+SRC-FRD-035,SRC-FRA-003,URL_EXACT,https://www.fbi.gov/news/press-releases/cryptocurrency-and-ai-scams-bilk-americans-of-billions,FBI Operation Winter SHIELD,FBI,REC-FRD-0035,2026-05-25T04:43:24Z
+SRC-FRD-036,SRC-FIN-006,URL_EXACT,https://www.ftc.gov/reports/consumer-sentinel-network-data-book-2024,Estimated True Fraud Losses $195.9B,FTC,REC-FRD-0036,2026-05-25T04:43:24Z
+SRC-FRD-037,SRC-FRA-013,URL_EXACT,https://keepnetlabs.com/blog/deepfake-statistics-and-trends,Deepfake Vishing 1600% Surge,Keepnet Labs,REC-FRD-0037,2026-05-25T04:43:24Z
+SRC-FRD-038,SRC-FRA-026,URL_EXACT,https://home.barclays/news/press-releases/2025/04/barclays-scams-bulletin,Barclays UK Social Media Fraud 214M GBP,Barclays,REC-FRD-0038,2026-05-25T04:43:24Z
+SRC-FRD-039,SRC-FRA-022,URL_EXACT,https://nacha.org/news/fbis-ic3-finds-almost-85-billion-lost-business-email-compromise-last-three-years,Financial Fraud Kill Chain 66% Freeze Rate,FBI IC3 / Nacha,REC-FRD-0039,2026-05-25T04:43:24Z
+SRC-FRD-041,SRC-FRA-008,URL_EXACT,https://www.aarp.org/money/scams-fraud/fbi-ftc-report-2025-losses/,AARP FBI Report $20.9B Analysis,AARP,REC-FRD-0041,2026-05-25T04:43:24Z
+SRC-FRD-045,SRC-FRA-001,URL_EXACT,https://www.fbi.gov/file-repository/2025_ic3report.pdf,"Phishing 191,561 IC3 Complaints",FBI IC3,REC-FRD-0045,2026-05-25T04:43:24Z
+SRC-FRD-046,SRC-FRA-005,URL_EXACT,https://www.sec.gov/newsroom/press-releases/2026-34,Nate AI Fraud SEC Charges,SEC,REC-FRD-0046,2026-05-25T04:43:24Z
+SRC-FRD-047,SRC-FRA-009,URL_EXACT,https://www.jdsupra.com/legalnews/key-trends-in-cftc-virtual-currency-2636711/,CFTC Zero Crypto Actions 2025,JD Supra / Cornerstone Research,REC-FRD-0047,2026-05-25T04:43:24Z
+SRC-FRD-049,SRC-FRA-005,URL_EXACT,https://www.sec.gov/newsroom/press-releases/2026-34,SEC Cross-Border Task Force,SEC,REC-FRD-0049,2026-05-25T04:43:24Z
+SRC-FRD-050,SRC-FRA-015,URL_EXACT,https://www.arnaques-rencontres.fr/en/articles/romance-scam-statistics,5-15% Victim Reporting Rate,Arnaques-Rencontres / Industry,REC-FRD-0050,2026-05-25T04:43:24Z
+SRC-CYB-047,SRC-CYB-004,URL_EXACT,https://www.ibm.com/security/data-breach,88% Organizations Using AI,IBM / Industry,REC-CYB-0047,2026-05-25T04:43:24Z
+SRC-CYB-048,SRC-CYB-004,URL_EXACT,https://www.ibm.com/security/data-breach,97% AI Breaches No Access Controls,IBM,REC-CYB-0048,2026-05-25T04:43:24Z
+SRC-CYB-049,SRC-CYB-013,URL_EXACT,https://www.crowdstrike.com/global-threat-report,Cloud-Conscious Intrusions +266%,CrowdStrike,REC-CYB-0049,2026-05-25T04:43:24Z
+SRC-AGT-008,SRC-CYB-010,URL_EXACT,https://arxiv.org/abs/2603.15714,Universal Prompt Injection Vulnerability,arXiv / DeepTeam,REC-AGT-0008,2026-05-25T04:43:24Z
+SRC-AGT-010,SRC-AIA-002,URL_EXACT,https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai,EU AI Act High-Risk Requirements,EU Commission,REC-AGT-0010,2026-05-25T04:43:24Z
+SRC-AGT-011,SRC-AIA-002,URL_EXACT,https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai,AI Act Foundation Model Rules,EU Commission,REC-AGT-0011,2026-05-25T04:43:24Z
+SRC-AGT-019,SRC-AST-012,URL_EXACT,https://www.ftc.gov,AI Voice Clone Fraud 2025,FTC / FBI,REC-AGT-0019,2026-05-25T04:43:24Z
+SRC-AGT-024,SRC-AST-003,URL_EXACT,https://www.nist.gov,AI Red Teaming Shortage,Industry / Government,REC-AGT-0024,2026-05-25T04:43:24Z
+SRC-AGT-034,SRC-AST-003,URL_EXACT,https://www.nist.gov,AI Agent Inter-Agent Communication Risk,NIST / Academic,REC-AGT-0034,2026-05-25T04:43:24Z
+SRC-AGT-036,SRC-AIA-006,URL_EXACT,https://www.iso.org/standard/81230.html,ISO 42001 AI Management System,ISO,REC-AGT-0036,2026-05-25T04:43:24Z
+SRC-AGT-039,SRC-CYB-013,URL_EXACT,https://www.crowdstrike.com/global-threat-report,DPRK AI-LinkedIn Insider Threat,CrowdStrike,REC-AGT-0039,2026-05-25T04:43:24Z

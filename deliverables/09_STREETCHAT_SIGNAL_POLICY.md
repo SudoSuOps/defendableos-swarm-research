@@ -1014,6 +1014,8 @@ detail.
 
 **Scenario**: A raw post contains PII, makes a criminal allegation against a named individual, and includes contact information.
 
+
+<!-- BEGIN PEDAGOGICAL_PII_TEST_FIXTURE: NOT LIVE PERSONAL DATA -->
 ```
 STEP 1 — Intake
 ━━━━━━━━━━━━━━━
@@ -1083,6 +1085,8 @@ Metadata retained for audit trail only. If Trust & Safety detects
 related signals about ABC Insurance, a new investigation may be 
 opened through formal channels.
 ```
+<!-- END PEDAGOGICAL_PII_TEST_FIXTURE -->
+
 
 ### 14.4 Workflow D: Special Category Data Handling
 
