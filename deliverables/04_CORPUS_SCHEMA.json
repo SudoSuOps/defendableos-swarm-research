@@ -1,0 +1,635 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://defendableos.org/schemas/corpus-record-2020-12",
+  "title": "DefendableOS Corpus Record Schema",
+  "description": "JSON Schema for validating DefendableOS corpus records documenting offensive security incidents, pain receipts, and defense fixers. Schema version: defendable-offense-pain-fixer-v0.1",
+  "version": "defendable-offense-pain-fixer-v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "definitions": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1,
+      "description": "A non-empty string value."
+    },
+    "nullableNonEmptyString": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "A non-empty string or null."
+    },
+    "dateTimeString": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?(Z|[+-]\\d{2}:\\d{2})?$",
+      "description": "ISO 8601 date-time string (e.g., 2024-01-15T09:30:00Z)."
+    },
+    "dateString": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "description": "ISO 8601 date string (e.g., 2024-01-15)."
+    },
+    "uriString": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^(https?|ftp)://[^\\s/$.?#].[^\\s]*$",
+      "description": "A valid URI string."
+    },
+    "severityLabelEnum": {
+      "type": "string",
+      "enum": [
+        "honey",
+        "jelly",
+        "propolis",
+        "critical"
+      ],
+      "description": "Severity label: honey (lowest), jelly (low-medium), propolis (medium-high), critical (highest)."
+    },
+    "trustTierEnum": {
+      "type": "string",
+      "enum": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "description": "Trust tier: 1 (highest trust), 2 (trusted), 3 (contextual), 4 (unverified/raw)."
+    },
+    "ledgerStatusEnum": {
+      "type": "string",
+      "enum": [
+        "ledger_ready",
+        "context_only",
+        "discovery_signal",
+        "quarantined",
+        "rejected"
+      ],
+      "description": "Ledger status indicating record readiness for the trust ledger."
+    },
+    "offenseStatusEnum": {
+      "type": "string",
+      "enum": [
+        "alleged",
+        "reported",
+        "admitted",
+        "settled",
+        "adjudicated",
+        "verified_technical",
+        "aggregate_only",
+        "unknown"
+      ],
+      "description": "Legal/evidentiary status of the offense signal."
+    },
+    "researchLaneEnum": {
+      "type": "string",
+      "enum": [
+        "vulnerability_disclosure",
+        "breach_reporting",
+        "threat_intelligence",
+        "incident_response",
+        "security_policy",
+        "compliance_audit",
+        "supply_chain_security",
+        "ransomware",
+        "phishing_social_engineering",
+        "insider_threat",
+        "nation_state_activity",
+        "malware_analysis",
+        "zero_day_exploit",
+        "cloud_security",
+        "iot_embedded_security",
+        "application_security",
+        "network_security",
+        "identity_access_management",
+        "data_privacy",
+        "fraud_financial_crime",
+        "denial_of_service",
+        "cryptographic_failure",
+        "misconfiguration",
+        "unknown"
+      ],
+      "description": "Research lane categorizing the domain of the corpus record."
+    },
+    "evidenceTypeEnum": {
+      "type": "string",
+      "enum": [
+        "technical_artifacts",
+        "log_files",
+        "forensic_report",
+        "court_filings",
+        "regulatory_filing",
+        "news_report",
+        "vendor_advisory",
+        "academic_paper",
+        "social_media_post",
+        "witness_testimony",
+        "contract_document",
+        "financial_records",
+        "screenshot",
+        "source_code",
+        "network_capture",
+        "audit_report",
+        "industry_report",
+        "government_report",
+        "other"
+      ],
+      "description": "Type of evidence associated with the record."
+    }
+  },
+  "required": [
+    "record_id",
+    "corpus_version",
+    "created_at",
+    "research_lane",
+    "source",
+    "classification",
+    "severity",
+    "trust",
+    "curator_training",
+    "privacy_and_safety"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[a-zA-Z0-9_\\-:]+$",
+      "description": "Unique identifier for the corpus record. Format: alphanumeric with hyphens, underscores, and colons."
+    },
+    "corpus_version": {
+      "type": "string",
+      "enum": [
+        "defendable-offense-pain-fixer-v0.1"
+      ],
+      "description": "Version of the corpus schema this record conforms to."
+    },
+    "created_at": {
+      "$ref": "#/definitions/dateTimeString",
+      "description": "ISO 8601 timestamp when this record was created."
+    },
+    "research_lane": {
+      "$ref": "#/definitions/researchLaneEnum",
+      "description": "Primary research lane or domain this record belongs to."
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Information about the source of this corpus record.",
+      "required": [
+        "source_id",
+        "source_name",
+        "source_type",
+        "trust_tier",
+        "primary_source",
+        "quoted_excerpt_under_250_chars"
+      ],
+      "properties": {
+        "source_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "description": "Unique identifier for the source within the corpus."
+        },
+        "source_name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "description": "Human-readable name of the source (e.g., publication name, organization)."
+        },
+        "source_owner": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "description": "Entity that owns or publishes the source material."
+        },
+        "source_type": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "description": "Type of source (e.g., news_article, blog_post, research_paper, court_filing, vendor_advisory, regulatory_filing, social_media, government_report, industry_report, database)."
+        },
+        "trust_tier": {
+          "$ref": "#/definitions/trustTierEnum",
+          "description": "Trustworthiness tier of the source: 1 (highest trust), 2 (trusted), 3 (contextual), 4 (unverified/raw)."
+        },
+        "publication_date": {
+          "$ref": "#/definitions/dateString",
+          "description": "Date when the source material was originally published."
+        },
+        "retrieved_date": {
+          "$ref": "#/definitions/dateString",
+          "description": "Date when the source material was retrieved/accessed for this record."
+        },
+        "primary_source": {
+          "type": "boolean",
+          "description": "True if this is a primary/original source; false if secondary or derivative."
+        },
+        "reference": {
+          "$ref": "#/definitions/uriString",
+          "description": "URI linking to the original source material."
+        },
+        "source_record_identifier": {
+          "type": "string",
+          "maxLength": 256,
+          "description": "Identifier used by the source system to reference this record (e.g., article ID, case number)."
+        },
+        "quoted_excerpt_under_250_chars": {
+          "type": "string",
+          "maxLength": 250,
+          "description": "Direct quote or excerpt from the source material, limited to 250 characters."
+        }
+      }
+    },
+    "classification": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Classification metadata describing the offense, pain receipt, and defense fixer.",
+      "required": [
+        "offense_signal",
+        "pain_receipt",
+        "defense_fixer"
+      ],
+      "properties": {
+        "offense_signal": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "Details about the offensive security incident or signal.",
+          "required": [
+            "category",
+            "status"
+          ],
+          "properties": {
+            "category": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128,
+              "description": "High-level category of the offense (e.g., data_breach, ransomware, insider_threat, supply_chain_attack)."
+            },
+            "subcategory": {
+              "type": "string",
+              "maxLength": 128,
+              "description": "More specific subcategory of the offense (e.g., credential_stuffing, phishing_campaign)."
+            },
+            "description": {
+              "type": "string",
+              "maxLength": 2000,
+              "description": "Detailed description of the offensive incident or signal."
+            },
+            "status": {
+              "$ref": "#/definitions/offenseStatusEnum",
+              "description": "Legal or evidentiary status of the offense signal."
+            }
+          }
+        },
+        "pain_receipt": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "Details about the impact, harm, or pain resulting from the offense.",
+          "required": [
+            "pain_type",
+            "affected_party_type",
+            "description"
+          ],
+          "properties": {
+            "pain_type": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128,
+              "description": "Type of pain/impact (e.g., financial_loss, reputational_damage, operational_disruption, data_loss, privacy_violation, regulatory_penalty, intellectual_property_theft, physical_harm)."
+            },
+            "affected_party_type": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128,
+              "description": "Category of the affected party (e.g., individual, small_business, enterprise, government, critical_infrastructure, healthcare, financial_institution, non_profit)."
+            },
+            "description": {
+              "type": "string",
+              "maxLength": 2000,
+              "description": "Detailed description of the pain, harm, or impact experienced."
+            },
+            "reported_dollar_loss": {
+              "oneOf": [
+                {
+                  "type": "number",
+                  "minimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Financial loss reported in USD, or null if not quantified."
+            },
+            "operational_impact": {
+              "type": "string",
+              "maxLength": 1000,
+              "description": "Description of operational impact (e.g., service_outage_duration, recovery_time, business_disruption_scope)."
+            },
+            "evidence_present": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true,
+              "description": "List of evidence types that are present and documented."
+            },
+            "evidence_missing": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true,
+              "description": "List of evidence types that are noted as missing or unavailable."
+            }
+          }
+        },
+        "defense_fixer": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "Recommended defensive actions, fixes, or mitigations.",
+          "required": [
+            "fixer_category",
+            "recommended_action",
+            "human_review_required",
+            "automation_candidate"
+          ],
+          "properties": {
+            "fixer_category": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128,
+              "description": "Category of the defense fixer (e.g., patch_management, access_control, monitoring, incident_response, user_training, architecture_change, policy_update, vendor_management, backup_recovery)."
+            },
+            "recommended_action": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000,
+              "description": "Detailed recommended defensive action or mitigation strategy."
+            },
+            "proof_required": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true,
+              "description": "Types of proof or verification required to confirm the fix is effective."
+            },
+            "human_review_required": {
+              "type": "boolean",
+              "description": "True if human expert review is required before implementing this fixer."
+            },
+            "automation_candidate": {
+              "type": "boolean",
+              "description": "True if this fixer is a candidate for automated implementation."
+            }
+          }
+        }
+      }
+    },
+    "severity": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Severity assessment of the corpus record.",
+      "required": [
+        "severity_label",
+        "severity_score_1_to_10",
+        "rationale"
+      ],
+      "properties": {
+        "severity_label": {
+          "$ref": "#/definitions/severityLabelEnum",
+          "description": "Severity label: honey (lowest), jelly (low-medium), propolis (medium-high), critical (highest)."
+        },
+        "severity_score_1_to_10": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 10,
+          "description": "Numeric severity score from 1 (lowest) to 10 (highest)."
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000,
+          "description": "Rationale explaining the assigned severity label and score."
+        }
+      }
+    },
+    "trust": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Trust and ledger metadata for the corpus record.",
+      "required": [
+        "ledger_status",
+        "confidence_score_0_to_1",
+        "corroboration_required"
+      ],
+      "properties": {
+        "ledger_status": {
+          "$ref": "#/definitions/ledgerStatusEnum",
+          "description": "Status indicating the record's readiness for the trust ledger."
+        },
+        "confidence_score_0_to_1": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Confidence score from 0.0 (no confidence) to 1.0 (full confidence)."
+        },
+        "fact_vs_inference_notes": {
+          "type": "string",
+          "maxLength": 2000,
+          "description": "Notes distinguishing factual claims from inferences or assumptions."
+        },
+        "corroboration_required": {
+          "type": "boolean",
+          "description": "True if additional corroborating sources are required for trust."
+        },
+        "corroborating_sources": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "description": "List of source IDs or names that corroborate this record's claims."
+        }
+      }
+    },
+    "curator_training": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Metadata indicating how this record should be used for ML training and evaluation.",
+      "required": [
+        "good_for_training",
+        "good_for_evaluation",
+        "good_for_failure_testing"
+      ],
+      "properties": {
+        "good_for_training": {
+          "type": "boolean",
+          "description": "True if this record is suitable for training machine learning models."
+        },
+        "good_for_evaluation": {
+          "type": "boolean",
+          "description": "True if this record is suitable for evaluation and benchmarking."
+        },
+        "good_for_failure_testing": {
+          "type": "boolean",
+          "description": "True if this record is useful for testing model failure modes and edge cases."
+        },
+        "labels_to_test": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "description": "List of specific labels or prediction targets this record is intended to test."
+        },
+        "expected_curator_behavior": {
+          "type": "string",
+          "maxLength": 1000,
+          "description": "Description of expected curator or model behavior when processing this record."
+        }
+      }
+    },
+    "privacy_and_safety": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Privacy and safety metadata for responsible data handling.",
+      "required": [
+        "pii_present",
+        "pii_removed",
+        "safe_for_storage"
+      ],
+      "properties": {
+        "pii_present": {
+          "type": "boolean",
+          "description": "True if the original source contained personally identifiable information."
+        },
+        "pii_removed": {
+          "type": "boolean",
+          "description": "True if PII has been removed or redacted from this record."
+        },
+        "sensitive_content_notes": {
+          "type": "string",
+          "maxLength": 1000,
+          "description": "Notes about sensitive content, including what was redacted and why."
+        },
+        "safe_for_storage": {
+          "type": "boolean",
+          "description": "True if this record is safe to store in the corpus without further sanitization."
+        }
+      }
+    }
+  },
+  "$defs": {
+    "example_record": {
+      "type": "object",
+      "description": "Example of a valid corpus record conforming to this schema.",
+      "properties": {
+        "_comment": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "record_id": "corp-2024-0017",
+      "corpus_version": "defendable-offense-pain-fixer-v0.1",
+      "created_at": "2024-06-15T14:32:00Z",
+      "research_lane": "ransomware",
+      "source": {
+        "source_id": "src-cisa-2024-0842",
+        "source_name": "CISA Alert AA24-060A",
+        "source_owner": "Cybersecurity and Infrastructure Security Agency",
+        "source_type": "government_report",
+        "trust_tier": "1",
+        "publication_date": "2024-02-29",
+        "retrieved_date": "2024-06-10",
+        "primary_source": true,
+        "reference": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-060a",
+        "source_record_identifier": "AA24-060A",
+        "quoted_excerpt_under_250_chars": "CISA, FBI, and HHS have released this joint advisory to provide information on the Royal ransomware variant that has targeted the Healthcare and Public Health sector."
+      },
+      "classification": {
+        "offense_signal": {
+          "category": "ransomware",
+          "subcategory": "double_extortion",
+          "description": "Royal ransomware operators encrypted systems and exfiltrated sensitive patient data from a regional hospital network, demanding payment under threat of data publication.",
+          "status": "verified_technical"
+        },
+        "pain_receipt": {
+          "pain_type": "operational_disruption",
+          "affected_party_type": "healthcare",
+          "description": "Hospital emergency departments diverted ambulances for 72 hours. Elective surgeries postponed. Patient record systems offline causing delays in critical care.",
+          "reported_dollar_loss": 2700000,
+          "operational_impact": "72-hour ambulance diversion, 340 elective procedures cancelled, EHR systems offline for 5 days, estimated 14-day full recovery",
+          "evidence_present": [
+            "technical_artifacts",
+            "forensic_report",
+            "government_report"
+          ],
+          "evidence_missing": [
+            "court_filings",
+            "financial_records"
+          ]
+        },
+        "defense_fixer": {
+          "fixer_category": "incident_response",
+          "recommended_action": "Implement network segmentation between IT and OT systems in healthcare environments. Deploy offline backup systems with tested recovery procedures. Conduct tabletop exercises for ransomware scenarios quarterly.",
+          "proof_required": [
+            "network_segmentation_verification",
+            "backup_recovery_test_results",
+            "exercise_documentation"
+          ],
+          "human_review_required": true,
+          "automation_candidate": false
+        }
+      },
+      "severity": {
+        "severity_label": "propolis",
+        "severity_score_1_to_10": 8,
+        "rationale": "Critical infrastructure sector targeted with significant operational disruption and potential patient safety impact. Verified by government agencies. High confidence technical evidence."
+      },
+      "trust": {
+        "ledger_status": "ledger_ready",
+        "confidence_score_0_to_1": 0.92,
+        "fact_vs_inference_notes": "Technical details of ransomware behavior are fact. Attribution to specific threat actor group is inference based on TTP correlation. Financial loss figure is estimated based on recovery costs reported by victim.",
+        "corroboration_required": false,
+        "corroborating_sources": [
+          "src-fbi-2024-0315",
+          "src-hhs-2024-0089"
+        ]
+      },
+      "curator_training": {
+        "good_for_training": true,
+        "good_for_evaluation": true,
+        "good_for_failure_testing": false,
+        "labels_to_test": [
+          "ransomware_classification",
+          "severity_scoring",
+          "healthcare_impact",
+          "government_source_verification"
+        ],
+        "expected_curator_behavior": "Model should correctly identify this as verified_technical ransomware with high severity in healthcare context. Should recognize government source as high-confidence."
+      },
+      "privacy_and_safety": {
+        "pii_present": true,
+        "pii_removed": true,
+        "sensitive_content_notes": "Hospital name and specific patient details redacted. Geographic region generalized to 'regional hospital network'. Victim organization anonymized.",
+        "safe_for_storage": true
+      }
+    }
+  ]
+}
